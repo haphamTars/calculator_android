@@ -34,7 +34,7 @@ public class MainActivity extends AppCompatActivity {
                     text.setText(Integer.toString(n1+n2));
                     ans = Integer.toString(n1+n2);
                     display = "";
-                    number1 = ans;
+                    number1 = ans;;
                     number2 = "";
                     prev = false;
                     break;
@@ -43,7 +43,7 @@ public class MainActivity extends AppCompatActivity {
                     text.setText(Integer.toString(n1-n2));
                     ans = Integer.toString(n1-n2);
                     display = "";
-                    number1 = ans;
+                    number1 = ans;;
                     number2 = "";
                     prev = false;
                     break;
@@ -52,7 +52,7 @@ public class MainActivity extends AppCompatActivity {
                     text.setText(Integer.toString(n1*n2));
                     ans = Integer.toString(n1*n2);
                     display = "";
-                    number1 = ans;
+                    number1 = ans;;
                     number2 = "";
                     prev = false;
                     break;
@@ -61,7 +61,7 @@ public class MainActivity extends AppCompatActivity {
                     text.setText(Integer.toString(n1/n2));
                     ans = Integer.toString(n1/n2);
                     display = "";
-                    number1 = ans;
+                    number1 = ans;;
                     number2 = "";
                     prev = false;
                     break;
@@ -87,6 +87,7 @@ public class MainActivity extends AppCompatActivity {
                     number1+="9";
                     display+="9";
                     text.setText(display);
+                    operated = false;
                     return;
                 }
 
@@ -108,6 +109,7 @@ public class MainActivity extends AppCompatActivity {
                     number1+="8";
                     display+="8";
                     text.setText(display);
+                    operated = false;
                     return;
                 }
                 if(operated == false) {
@@ -129,6 +131,7 @@ public class MainActivity extends AppCompatActivity {
                     number1+="7";
                     display+="7";
                     text.setText(display);
+                    operated = false;
                     return;
                 }
                 if(operated == false) {
@@ -149,6 +152,7 @@ public class MainActivity extends AppCompatActivity {
                     number1+="6";
                     display+="6";
                     text.setText(display);
+                    operated = false;
                     return;
                 }
                 if(operated == false) {
@@ -169,6 +173,7 @@ public class MainActivity extends AppCompatActivity {
                     number1+="5";
                     display+="5";
                     text.setText(display);
+                    operated = false;
                     return;
                 }
                 if(operated == false) {
@@ -189,6 +194,7 @@ public class MainActivity extends AppCompatActivity {
                     number1+="4";
                     display+="4";
                     text.setText(display);
+                    operated = false;
                     return;
                 }
                 if(operated == false) {
@@ -209,6 +215,7 @@ public class MainActivity extends AppCompatActivity {
                     number1+="3";
                     display+="3";
                     text.setText(display);
+                    operated = false;
                     return;
                 }
                 if(operated == false) {
@@ -229,6 +236,7 @@ public class MainActivity extends AppCompatActivity {
                     number1+="2";
                     display+="2";
                     text.setText(display);
+                    operated = false;
                     return;
                 }
                 if(operated == false) {
@@ -249,6 +257,7 @@ public class MainActivity extends AppCompatActivity {
                     number1+="1";
                     display+="1";
                     text.setText(display);
+                    operated = false;
                     return;
                 }
                 if(operated == false) {
@@ -269,6 +278,7 @@ public class MainActivity extends AppCompatActivity {
                     number1+="0";
                     display+="0";
                     text.setText(display);
+                    operated = false;
                     return;
                 }
                 if(operated == false) {
@@ -295,6 +305,9 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 operation = 1;
+                if(prev){
+                    number1 = ans;
+                }
                 prev = false;
                 if(operated == false){
                     operated = true;
@@ -311,6 +324,9 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 operation = 2;
+                if(prev){
+                    number1 = ans;
+                }
                 prev = false;
                 if(operated == false){
                     operated = true;
@@ -326,6 +342,9 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 operation = 3;
+                if(prev){
+                    number1 = ans;
+                }
                 prev = false;
                 if(operated == false){
                     operated = true;
@@ -342,6 +361,9 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 operation = 4;
+                if(prev){
+                    number1 = ans;
+                }
                 prev = false;
                 if(operated == false){
                     operated = true;
@@ -366,5 +388,18 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
+        findViewById(R.id.CE_btn).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                text.setText("0");
+                operated = false;
+                operation = -1;
+                number1 = "";
+                number2 = "";
+                ans ="";
+                display = "";
+                prev = false;
+            }
+        });
     }
 }

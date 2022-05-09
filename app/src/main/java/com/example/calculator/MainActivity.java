@@ -88,7 +88,7 @@ public class MainActivity extends AppCompatActivity {
                     display+="9";
                     text.setText(display);
                     operated = false;
-                    return;
+                    prev=false; return;
                 }
 
                 if(operated == false) {
@@ -110,6 +110,7 @@ public class MainActivity extends AppCompatActivity {
                     display+="8";
                     text.setText(display);
                     operated = false;
+                    prev=false;
                     return;
                 }
                 if(operated == false) {
@@ -132,6 +133,7 @@ public class MainActivity extends AppCompatActivity {
                     display+="7";
                     text.setText(display);
                     operated = false;
+                    prev=false;
                     return;
                 }
                 if(operated == false) {
@@ -153,6 +155,7 @@ public class MainActivity extends AppCompatActivity {
                     display+="6";
                     text.setText(display);
                     operated = false;
+                    prev=false;
                     return;
                 }
                 if(operated == false) {
@@ -174,6 +177,7 @@ public class MainActivity extends AppCompatActivity {
                     display+="5";
                     text.setText(display);
                     operated = false;
+                    prev=false;
                     return;
                 }
                 if(operated == false) {
@@ -195,6 +199,7 @@ public class MainActivity extends AppCompatActivity {
                     display+="4";
                     text.setText(display);
                     operated = false;
+                    prev=false;
                     return;
                 }
                 if(operated == false) {
@@ -216,6 +221,7 @@ public class MainActivity extends AppCompatActivity {
                     display+="3";
                     text.setText(display);
                     operated = false;
+                    prev=false;
                     return;
                 }
                 if(operated == false) {
@@ -237,6 +243,7 @@ public class MainActivity extends AppCompatActivity {
                     display+="2";
                     text.setText(display);
                     operated = false;
+                    prev=false;
                     return;
                 }
                 if(operated == false) {
@@ -258,6 +265,7 @@ public class MainActivity extends AppCompatActivity {
                     display+="1";
                     text.setText(display);
                     operated = false;
+                    prev=false;
                     return;
                 }
                 if(operated == false) {
@@ -279,6 +287,7 @@ public class MainActivity extends AppCompatActivity {
                     display+="0";
                     text.setText(display);
                     operated = false;
+                    prev=false;
                     return;
                 }
                 if(operated == false) {
