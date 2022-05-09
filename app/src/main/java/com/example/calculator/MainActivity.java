@@ -397,6 +397,7 @@ public class MainActivity extends AppCompatActivity {
                 number1 = "";
                 number2 = "";
                 ans ="";
+                display = "";
                 prev = false;
             }
         });
